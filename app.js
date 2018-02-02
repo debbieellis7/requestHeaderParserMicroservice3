@@ -21,9 +21,14 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 
 
-
-
 // Index Route
+app.get('/', (req, res) => {
+	res.render('index');
+});
+
+
+
+// API Route
 app.get('/api/whoami/', (req, res) => {
 	const ipaddress = req.ip;
 	const language = req.acceptsLanguages();
