@@ -1,0 +1,16 @@
+{
+  "name": "node_express_boilerplate",
+  "version": "1.0.0",
+  "description": "Node and Express Boiler Plate",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "express-useragent": "^1.0.8"
+  }
+}
