@@ -1,3 +1,3 @@
 # requestHeaderParserMicroservice3
 
-proceed to URL: api/whoami/
+proceed to URL:    /api/whoami/
