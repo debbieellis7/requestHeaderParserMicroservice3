@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const useragent = require('express-useragent');
+const requestIp = require('request-ip');
 
 const app = express();
 
@@ -30,7 +31,7 @@ app.get('/', (req, res) => {
 
 // API Route
 app.get('/api/whoami/', (req, res) => {
-	const ipaddress = req.ip;
+	const ipaddress = requestIp.getClientIp(req);
 	const language = req.acceptsLanguages();
 	const os = req.useragent.source;
 	const result = { ipaddress: ipaddress, language: language[0], software: os.slice(13, 40) };
